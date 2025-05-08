@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="3.1" xmlns="https://jakarta.ee/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd">
+  <persistence-unit name="MPU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+    <class>pe.edu.continental.poo.taskapp.entidades.Usuario</class>
+    <class>pe.edu.continental.poo.taskapp.entidades.Curso</class>
+    <class>pe.edu.continental.poo.taskapp.entidades.Inscripcion</class>
+    <properties>
+      <property name="jakarta.persistence.jdbc.url" value="jdbc:mariadb://localhost:3306/matriculas"/>
+      <property name="jakarta.persistence.jdbc.user" value="edsonqh"/>
+      <property name="jakarta.persistence.jdbc.driver" value="org.mariadb.jdbc.Driver"/>
+      <property name="jakarta.persistence.jdbc.password" value="765610hupius"/>
+      <property name="hibernate.cache.provider_class" value="org.hibernate.cache.NoCacheProvider"/>
+      <property name="jakarta.persistence.schema-generation.database.action" value="drop-and-create"/>
+    </properties>
+  </persistence-unit>
+</persistence>
